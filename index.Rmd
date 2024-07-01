@@ -28,7 +28,7 @@ Following some best practices from day 1 can not only **help you prepare** this 
 
 ![](images/aea-dcap-top.png)
 
-## Goal
+# Goal
 
 - [ ] Illustrate principles of reproducible research from the start
 - [ ] Stay reasonably close to an ideal reproducibility Standard
