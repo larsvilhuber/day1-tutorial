@@ -31,3 +31,7 @@ download.file(url="$URL",destfile="(outputfile)")
   - Add data URL and time accessed (can you think of a way to automate this?)
   - Add a link to license (also: download and store the license)
 
+
+## Link
+
+Step 1: [Stata](https://drive.google.com/file/d/10IH2TCnckH8TLeZ0P6cJlVgpyrqC4Q3L/view?usp=sharing), [R](https://drive.google.com/file/d/10_pxEathhgIhxdYl2YFZVhv3oaPgJt2u/view?usp=drive_link)

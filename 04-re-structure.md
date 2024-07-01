@@ -20,5 +20,11 @@ The merged data should go in the `data/generated` directory.
 - Consolidate paths
 - Time to write a main file!
 
+## Link
+
+
+Step 2: [Stata](https://drive.google.com/file/d/10H1tlkbPgu88whHZddLRibZystu5mrZt/view?usp=drive_link)
+[R](https://drive.google.com/file/d/10_2sFQGfc4m9MEQexZ87S15umFw4b9HH/view?usp=drive_link)
+
 ## Stage 3
 
