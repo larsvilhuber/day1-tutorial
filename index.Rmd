@@ -4,7 +4,7 @@ author:
   - "Lars Vilhuber"
   - "Marie Connolly"
   - "Miklós Koren"
-date: June 30 2024
+date: August 2024
 
 ---
 
