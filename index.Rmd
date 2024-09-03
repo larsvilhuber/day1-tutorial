@@ -29,7 +29,7 @@ date: August 2024
 
 ::::
 
-[lars.vilhuber.com/p/weai-2024/](https://lars.vilhuber.com/p/weai-2024/)
+[lars.vilhuber.com/p/eale-2024/](https://lars.vilhuber.com/p/eale-2024/)
 
 
 # Reproducibility from Day 1
