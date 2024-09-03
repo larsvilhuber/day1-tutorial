@@ -12,7 +12,14 @@ jobs:
   compile-presentation:
     runs-on: ubuntu-22.04
     steps:
-    - uses: actions/checkout@v2
+
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v3
+  
     # Let's do the Quarto
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
@@ -37,10 +44,9 @@ jobs:
 
     - name: Upload Artifact
       id: artifact-upload-step2
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-pages-artifact@v2
       with:
         path: _html
-        name: github-pages
 
   publish:
     needs: compile-presentation
