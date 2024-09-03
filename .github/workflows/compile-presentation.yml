@@ -34,9 +34,12 @@ jobs:
     #     path: ./presentation
       run: |
         quarto render index.Rmd
+
     - name: Upload Artifact
       id: artifact-upload-step2
       uses: actions/upload-artifact@v4
+      with:
+        path: .
 
   publish:
     needs: compile-presentation
