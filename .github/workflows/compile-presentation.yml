@@ -8,11 +8,8 @@ on:
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
-  compile-presentation:
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
 
+  compile-presentation:
     runs-on: ubuntu-22.04
     steps:
 
@@ -43,39 +40,29 @@ jobs:
     #   with:
     #     path: ./presentation
       run: |
-        quarto render index.Rmd
-      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
-    - name: Publish to GitHub Pages (and render) 
-      uses: quarto-dev/quarto-actions/publish@v2
+        quarto render --output-dir _html index.Rmd
+
+    - name: Upload Artifact
+      uses: actions/upload-pages-artifact@v3.0.1    
       with:
-        target: gh-pages
         path: _html
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
-
-  #   - name: Upload Artifact
-  #     id: artifact-upload-step2
-  #     uses: actions/upload-artifact@v4
-  #     with:
-  #       path: _html
-  #       name: github-pages
-
-  # publish:
-  #   needs: compile-presentation
     
-  #   # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-  #   permissions:
-  #     pages: write      # to deploy to Pages
-  #     id-token: write   # to verify the deployment originates from an appropriate source
+  publish:
+    needs: compile-presentation
+    
+    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
 
-  #   # Deploy to the github-pages environment
-  #   environment:
-  #     name: github-pages
-  #     url: ${{ steps.deployment.outputs.page_url }}
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-  #   # Specify runner + deployment step
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Deploy to GitHub Pages
-  #       id: deployment
-  #       uses: actions/deploy-pages@v4 
+    # Specify runner + deployment step
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4 
