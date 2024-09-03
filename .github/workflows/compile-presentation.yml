@@ -44,9 +44,10 @@ jobs:
 
     - name: Upload Artifact
       id: artifact-upload-step2
-      uses: actions/upload-pages-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         path: _html
+        name: github-pages
 
   publish:
     needs: compile-presentation
