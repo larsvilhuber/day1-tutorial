@@ -20,11 +20,28 @@ The merged data should go in the `data/generated` directory.
 - Consolidate paths
 - Time to write a main file!
 
+## Purpose of the main file
+
+- One-touch reproduction
+- Robustness checks all along
+
+## Example
+
+```
+do "code/00_setup.do"
+do "code/01_download_data.do"
+do "code/02_create_analysis_sample.do"
+do "code/03_analysis.do"
+```
+
+
 ## Link
 
 
-Step 2: [Stata](https://drive.google.com/file/d/10H1tlkbPgu88whHZddLRibZystu5mrZt/view?usp=drive_link)
-[R](https://drive.google.com/file/d/10_2sFQGfc4m9MEQexZ87S15umFw4b9HH/view?usp=drive_link)
+Step 5:[^fallback3]
+ 
+- [Stata](https://drive.google.com/file/d/1-wACVz8iMmDWbuYqLSePc2ZuGp-0yFbv/view?usp=drive_link)
+- [R](https://drive.google.com/file/d/10Zgjtfd0M4WRJToKt9M08jIoLEKCdaiC/view?usp=drive_link) 
 
-## Stage 3
+[^fallback3]: [🔒Tag: stage5](https://github.com/codedthinking/day1/tree/stage5)
 

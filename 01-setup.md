@@ -10,8 +10,8 @@
 
 ## First steps
 
-1. Create an empty folder, like `Documents/day1`
-2. Navigate to this folder in Stata
-3. Open this folder in your text editor, if it can open folders
+1. Create an empty folder, like `Desktop/day1`
+2. Navigate to this folder in Stata: `cd ../Desktop/day1`
+3. Open this folder in your text editor, if it can open folders (optional)
 4. Google "[CEPII GeoDist](https://duckduckgo.com/?t=ffab&q=cepii+geodist&ia=web)"
 
