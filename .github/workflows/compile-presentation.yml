@@ -40,6 +40,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         path: .
+        name: github-pages
 
   publish:
     needs: compile-presentation
