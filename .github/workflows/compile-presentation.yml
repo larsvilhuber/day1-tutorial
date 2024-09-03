@@ -10,6 +10,10 @@ on:
 jobs:
 
   compile-presentation:
+  permissions:
+     pages: write      # to deploy to Pages
+     id-token: write   # to verify the deployment originates from an appropriate source
+
     runs-on: ubuntu-22.04
     steps:
 
@@ -41,30 +45,37 @@ jobs:
     #     path: ./presentation
       run: |
         quarto render index.Rmd
-
-    - name: Upload Artifact
-      id: artifact-upload-step2
-      uses: actions/upload-artifact@v4
+      # NOTE: If Publishing to GitHub Pages, set the permissions correctly (see top of this yaml)
+    - name: Publish to GitHub Pages (and render) 
+      uses: quarto-dev/quarto-actions/publish@v2
       with:
-        path: _html
-        name: github-pages
+        target: gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # this secret is always available for github actions
 
-  publish:
-    needs: compile-presentation
+  #   - name: Upload Artifact
+  #     id: artifact-upload-step2
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       path: _html
+  #       name: github-pages
+
+  # publish:
+  #   needs: compile-presentation
     
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+  #   # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+  #   permissions:
+  #     pages: write      # to deploy to Pages
+  #     id-token: write   # to verify the deployment originates from an appropriate source
 
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  #   # Deploy to the github-pages environment
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
 
-    # Specify runner + deployment step
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4 
+  #   # Specify runner + deployment step
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v4 
