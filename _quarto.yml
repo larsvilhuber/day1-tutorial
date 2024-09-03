@@ -1,3 +1,5 @@
+project:
+  output-dir: _html
 format: 
   revealjs:
     scrollable: true

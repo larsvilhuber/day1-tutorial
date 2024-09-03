@@ -39,7 +39,7 @@ jobs:
       id: artifact-upload-step2
       uses: actions/upload-artifact@v4
       with:
-        path: .
+        path: _html
         name: github-pages
 
   publish:
