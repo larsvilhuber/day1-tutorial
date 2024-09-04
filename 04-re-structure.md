@@ -8,9 +8,10 @@ These two can go in the same script, `create_sample.do`
 
 ## Where does the merged data go?
 
-Where does the newly merged data go? 
 
-> No overwriting! 
+> No overwriting of original data! 
+
+---
 
 The merged data should go in the `data/generated` directory.
 
@@ -18,10 +19,14 @@ The merged data should go in the `data/generated` directory.
 
 - Create directories
 - Consolidate paths
+
+---
+
 - Time to write a main file!
 
 ## Purpose of the main file
 
+- Complete list of all steps!
 - One-touch reproduction
 - Robustness checks all along
 
