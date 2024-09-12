@@ -23,7 +23,7 @@ if $redownload == 1 {
 }
 ```
 
-### Robust download code (2)
+## Robust download code (2)
 
 Automatically download the file again if not there.
 
@@ -39,7 +39,7 @@ if $redownload == 1 {
 ...
 ```
 
-### Robust download code (3)
+## Robust download code (3)
 
 What if the file has changed?
 
