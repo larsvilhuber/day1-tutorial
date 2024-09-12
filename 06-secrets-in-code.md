@@ -115,22 +115,30 @@ include "config.do"
 
 # Confidential code? 
 
-## What is confidential code, you say? 
+## What is confidential code, you say? {transition="fade"}
 
 - In the United States, some **variables on IRS databases** are considered super-top-secret. So you can't name that-variable-that-you-filled-out-on-your-Form-1040 in your analysis code of same data. (They are often referred to in jargon as "Title 26 variables"). 
 - Your code contains the **random seed you used to anonymize** the sensitive identifiers. This might allow to reverse-engineer the anonymization, and is not a good idea to publish.
+
+## What is confidential code, you say? {transition="fade"}
+
 - You used a **look-up table hard-coded** in your Stata code to anonymize the sensitive identifiers (`replace anoncounty=1 if county="Tompkins, NY"`). A really bad idea, but yes, you probably want to hide that.
 - Your IT specialist or  disclosure officer thinks publishing the **exact path** to your copy of the confidential 2010 Census data, e.g., "/data/census/2010", is a security risk and refuses to let that code through.
+
+## What is confidential code, you say? {transition="fade"}
+
 - You have adhered to disclosure rules, but for some reason, the precise minimum cell size is a confidential parameter.
+
+## What is confidential code, you say? {transition="fade"}
 
 So whether reasonable or not, this is an issue. How do you do that, without messing up the code, or spending hours redacting your code?
 
-## Example 
+## Example {.smaller transition="fade"}
 
 - This will serve as an example. None of this is specific to Stata, and the solutions for R, Python, Julia, Matlab, etc. are all quite similar. 
 - Assume that variables `q2f` and `q3e` are considered confidential by some rule, and that the minimum cell size `10` is also confidential.
 
-```{stata, eval=FALSE}
+```{.stata}
 set seed 12345
 use q2f q3e county using "/data/economic/cmf2012/extract.dta", clear
 gen logprofit = log(q2f)
@@ -140,11 +148,11 @@ graph twoway n logprofit
 ```
 
 
-## Do not do this
+## Do not do this {.smaller transition="fade"}
 
 A bad example, because literally making more work for you and for future replicators, is to manually redact the confidential information with text that is not legitimate code:
 
-```{stata, eval=FALSE}
+```{.stata}
 set seed NNNNN
 use <removed vars> county using "<removed path>", clear
 gen logprofit = log(XXXX)
@@ -155,11 +163,11 @@ graph twoway n logprofit
 
 The redacted program above will no longer run, and will be very tedious to un-redact if a subsequent replicator obtains legitimate access to the confidential data.
 
-## Better {.smaller}
+## Better {.smaller transition="fade"}
 
 Simply replacing the confidential data with replacement that are valid placeholders in the programming language of your choice is already better. Here's the confidential version of the file:
 
-```{stata, eval=FALSE}
+```{.stata}
 //============ confidential parameters =============
 global confseed    12345
 global confpath    "/data/economic/cmf2012"
@@ -174,11 +182,12 @@ by county: collapse (count)  n=$confemploy (mean) logprofit
 drop if n<$confmincell
 graph twoway n logprofit
 ```
-## Better {.smaller}
+
+## Better {.smaller transition="fade"}
 
 and this would be the released file, part of the replication package:
 
-```{stata, eval=FALSE}
+```{.stata}
 //============ confidential parameters =============
 global confseed    XXXX    // a number
 global confpath    "XXXX"  // a path that will be communicated to you
@@ -196,17 +205,28 @@ graph twoway n logprofit
 
 While the code won't run as-is, it is easy to un-redact, regardless of how many times you reference the confidential values, e.g., `q2f`, anywhere in the code.
 
-## Best
+## Caveats {.smaller}
 
-Note that you have to re-run the entire code to obtain a modified graph, e.g., if you want to add some reference line, or change colors. But if the data presented in the graph is non-sensitive (i.e., disclosable), then the data underlying it is as well. Thus, and this is a more general approach, we can provide code that automatically detects if the confidential data is there, and only then will it run the data preparation part, but it will always run for the graphing ("analysis") part of the code. 
+- You have to re-run the entire code to obtain a modified graph
+- But if the data presented in the graph is non-sensitive (i.e., disclosable), then the **data** underlying it is as well. 
 
-We also introduce the use of a separate file for all the confidential parameters, which may be more convenient, since now, no redaction is needed - the confidential file is simply dropped (but should be documented).
+$\rightarrow$ provide code that 
+
+- automatically detects if the confidential data is there (skips if not)
+- will always run for the graphing ("analysis") part of the code. 
+
+
+## Best {.smaller}
+
+- Main file
+- Conditional processing 
+- Separate file for confidential parameters which can simply be excluded from disclosure request
 
 ## Best {.smaller}
 
 Main file `main.do`:
 
-```{stata, eval=FALSE}
+```{.stata}
 //============ confidential parameters =============
 capture confirm file "include/confparms.do"
 if _rc == 0 {
@@ -228,7 +248,7 @@ cap mkdir "$safepath"
 
 Main file `main.do` (continued)
 
-```{stata, eval=FALSE}
+```{.stata}
 // ::::  Process only if confidential data is present 
 
 capture confirm  file "${confpath}/extract.dta"
@@ -253,7 +273,7 @@ graph export "${safepath}/figure1.pdf", replace
 
 Auxiliary file `include/confparms.do` (not released)
 
-```{stata, eval=FALSE}
+```{.stata}
 //============ confidential parameters =============
 global confseed    12345
 global confpath    "/data/economic/cmf2012"
@@ -267,7 +287,7 @@ global confmincell 10
 
 Auxiliary file `include/confparms_template.do` (this is released)
 
-```{stata, eval=FALSE}
+```{.stata}
 //============ confidential parameters =============
 global confseed    XXXX    // a number
 global confpath    "XXXX"  // a path that will be communicated to you
@@ -281,7 +301,7 @@ global confmincell XXX     // a number
 
 Thus, the replication package would have:
 
-```
+```{.bash}
 main.do
 README.md
 include/confparms_template.do

@@ -1,10 +1,5 @@
 
-
-
-
-
-
-# Part 4 | Wrapping up the replication package
+# Maintaining documentation
 
 ## Wrapping up the replication package
 
@@ -77,7 +72,7 @@ In order to describe data availability, split into two:
 - how can OTHERS get access to the same data (that might be different!)
 - The two are not always the same, but are both relevant. 
 
-## Examples {.smaller}
+## Examples {transition="fade" }
 
 Examples include 
 
@@ -99,7 +94,7 @@ https://www.census.gov/ces/rdcresearch/howtoapply.html.
 >   NOTE: Project-related files are available for 10 years as of 2015. 
 
 
-## Examples {.smaller}
+## Examples {transition="fade" }
 
 Examples include 
 
@@ -128,12 +123,13 @@ with the end really just a last read/edit.
 - Public replication package contains intelligible code, omits confidential details (but provides template code), has detailed data provenance statements
 - Confidential replication package contains all the same, plus the confidential code, is archived in the FSRDC
 
-Now you wait for the replicators to show up!
-
-# Addenda
-
 ## Things to remember
 
 - When doing a disclosure review request, remember to request the **code**
 - When outputting statistics, *consider the disclosure rules* - the less changes, the faster the output (in theory), but in particular fewer surprises
 - Do not think "*nobody will ever read this code*" - somebody is very likely to!
+
+
+# End
+
+Now you wait for the replicators to show up!
