@@ -29,7 +29,7 @@ date: August 2024
 
 ::::
 
-[lars.vilhuber.com/p/eale-2024/](https://lars.vilhuber.com/p/eale-2024/)
+[lars.vilhuber.com/p/fsrdc-2024/](https://lars.vilhuber.com/p/fsrdc-2024/)
 
 
 # Reproducibility from Day 1
@@ -90,6 +90,9 @@ We finish with a mini-project about public procurement across various European c
 ```
 
 ```{r, child=c(here::here('05-robust-code.md'))} 
+```
+
+```{r, child=c(here::here('06-secrets-in-code.md'))} 
 ```
 
 # Part 2
