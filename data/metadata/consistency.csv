@@ -1,8 +1,8 @@
-filename,path,checksum,date
-anes_timeseries_2020_stata_20220210_hill_roberts_subset.csv,external,,2024-09-11
-China2021Data.csv,external,,2024-09-11
-LucidPlotText.csv,external,,2024-09-11
-LucidWideFile.csv,external,,2024-09-11
-Pre2020Surveys_Pooled.csv,external,,2024-09-11
-trials.Rds,registry,,2024-09-11
-consistency.csv,metadata,,2024-09-11
+"filename","path","sha256sum","asofdate"
+"anes_timeseries_2020_stata_20220210_hill_roberts_subset.csv","external","75d050817b922b02b444b58c279f5d770f01376321d894c80b76364063248b63","Fri Sep 13 07:53:19 2024"
+"China2021Data.csv","external","2ce75c757229ddb631cadccc9c4063537de313d3a754fed13f93054656261bba","Fri Sep 13 07:53:19 2024"
+"LucidPlotText.csv","external","992daee8392ebeee510290a7b5895d53028c358b892a9d7c10a6391b5d979194","Fri Sep 13 07:53:19 2024"
+"LucidWideFile.csv","external","767eb7b05fc1910603780680476cf32fee845728b4c7346e9f0ada6ed0c84f04","Fri Sep 13 07:53:19 2024"
+"Pre2020Surveys_Pooled.csv","external","17b6cc33b8bdc3938aab5b59de0dc4fa2b724d1ad997060385466d0899dae82e","Fri Sep 13 07:53:19 2024"
+"trials.Rds","registry","07e0a48dc2bb5896fd89540915f431eb6e1b36b374c848c1edfbabee8d5e6ad7","Fri Sep 13 07:53:19 2024"
+"consistency.csv","metadata","2732f4a0fa6a580fc601266ed34e76d6b276a256a09e95232022b7b53f4a9025","Fri Sep 13 07:53:19 2024"
