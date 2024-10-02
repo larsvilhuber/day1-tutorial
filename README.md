@@ -58,3 +58,11 @@ Summary: Journals require that you share your code and data in a replication pac
 20. Download their ZIP file, and try to reproduce their results.
     1. Can you do so by changing only 1 line of code?
 	2. Can you do so without changing a single line of code?
+
+
+
+## License
+
+This presentation:
+
+- Licensed under [![CC BY-NC 4.0](/images/by-nc.png)](https://creativecommons.org/licenses/by-nc/4.0/)
