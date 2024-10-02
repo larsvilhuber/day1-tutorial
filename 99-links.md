@@ -22,3 +22,8 @@ Step 4: [Stata](https://drive.google.com/file/d/10-ljRN__Rt2ZCnnQzqm0vZQV3u7tYwx
 
 Step 5: [Stata](https://drive.google.com/file/d/1-wACVz8iMmDWbuYqLSePc2ZuGp-0yFbv/view?usp=drive_link)
 [R](https://drive.google.com/file/d/10Zgjtfd0M4WRJToKt9M08jIoLEKCdaiC/view?usp=drive_link)
+
+---
+
+- This presentation's source: <https://github.com/larsvilhuber/day1-tutorial/>
+- Licensed under [![CC BY-NC 4.0](/images/by-nc.png)](https://creativecommons.org/licenses/by-nc/4.0/)
