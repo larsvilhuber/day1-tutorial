@@ -4,7 +4,7 @@ author:
   - "Lars Vilhuber"
   - "Marie Connolly"
   - "Miklós Koren"
-date: August 2024
+date: October 2024
 
 ---
 
@@ -29,7 +29,7 @@ date: August 2024
 
 ::::
 
-[lars.vilhuber.com/p/fsrdc2024/](https://lars.vilhuber.com/p/fsrdc2024/)
+[lars.vilhuber.com/p/berlin2024/](https://lars.vilhuber.com/p/berlin2024/)
 
 
 # Reproducibility from Day 1
