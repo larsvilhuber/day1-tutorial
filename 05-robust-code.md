@@ -109,8 +109,8 @@ global step2 1
 
 do "code/00_setup.do"
 if $step1 == 1  do "code/01_download_data.do"
-if $step2 == 2  do "code/02_create_analysis_sample.do"
-if $step3 == 3  do "code/03_analysis.do"
+if $step2 == 1  do "code/02_create_analysis_sample.do"
+if $step3 == 1  do "code/03_analysis.do"
 ```
 
 ## Example (2) {transition="fade" transition-speed="fast"}
@@ -141,8 +141,8 @@ global step2 1
 
 do "code/00_setup.do"
 if $step1 == 1  do "code/01_download_data.do"
-if $step2 == 2  do "code/02_create_analysis_sample.do"
-if $step3 == 3  do "code/03_analysis.do"
+if $step2 == 1  do "code/02_create_analysis_sample.do"
+if $step3 == 1  do "code/03_analysis.do"
 ```
 
 ## Starting to be complex
@@ -177,8 +177,8 @@ global step2 1
 // Nothing needs to be changed here
 do "$rootdir/code/00_setup.do"
 if $step1 == 1  do "$rootdir/code/01_download_data.do"
-if $step2 == 2  do "$rootdir/code/02_create_analysis_sample.do"
-if $step3 == 3  do "$rootdir/code/03_analysis.do"
+if $step2 == 1  do "$rootdir/code/02_create_analysis_sample.do"
+if $step3 == 1  do "$rootdir/code/03_analysis.do"
 ```
 
 ## Example (5) {transition="fade" transition-speed="fast"}
@@ -197,8 +197,8 @@ global step2 1
 // Nothing needs to be changed here
 do "$rootdir/code/00_setup.do"
 if $step1 == 1  do "$rootdir/code/01_download_data.do"
-if $step2 == 2  do "$rootdir/code/02_create_analysis_sample.do"
-if $step3 == 3  do "$rootdir/code/03_analysis.do"
+if $step2 == 1  do "$rootdir/code/02_create_analysis_sample.do"
+if $step3 == 1  do "$rootdir/code/03_analysis.do"
 ```
 
 ## Example (6) 
@@ -220,8 +220,8 @@ if `r(checksum)' == $checksum1 global step2 0
 // Nothing needs to be changed here
 do "$rootdir/code/00_setup.do"
 if $step1 == 1  do "$rootdir/code/01_download_data.do"
-if $step2 == 2  do "$rootdir/code/02_create_analysis_sample.do"
-if $step3 == 3  do "$rootdir/code/03_analysis.do"
+if $step2 == 1  do "$rootdir/code/02_create_analysis_sample.do"
+if $step3 == 1  do "$rootdir/code/03_analysis.do"
 ```
 
 ---
