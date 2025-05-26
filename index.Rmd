@@ -31,10 +31,10 @@ WEBSITE_SHORT <- paste0(GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSI
 ```
 
 
-```{r, child=c(here::here("presentation",'00-qrcode.md'))}
+```{r, child=c(here::here('00-qrcode.md'))}
 ```
 
-```{r, child=c(here::here("presentation",'00-follow-along.md'))}
+```{r, child=c(here::here('00-follow-along.md'))}
 ```
 
 
