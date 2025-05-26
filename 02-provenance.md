@@ -29,6 +29,12 @@
 
 ## Can we re-publish the file?
 
+Various guidance pages provided by data editors and others:
+
+- [List of accepted "open source" licenses](https://opensource.org/licenses) and [Creative Commons licenses](https://creativecommons.org/share-your-work/cclicenses/)
+- [Social Science Data Editors' Licensing Guidance](https://social-science-data-editors.github.io/guidance/Guidance/Licensing_guidance.html)
+- [Commonly occurring terms of use](https://social-science-data-editors.github.io/reference/TermsOfUse.html)
+
 # Downloading via code
 
 ## Easiest:

@@ -4,7 +4,9 @@
 
 Write a merging script. Create the sample.
 
-These two can go in the same script, `create_sample.do`
+These two can go in the same script, `create_analysis_sample.do`
+
+> [Download from here](https://gist.github.com/larsvilhuber/d212f924b1b96ebe2a547fe7b1d2c1bd)
 
 ## Where does the merged data go?
 
@@ -13,40 +15,21 @@ These two can go in the same script, `create_sample.do`
 
 ---
 
-The merged data should go in the `data/generated` directory.
+- The raw data should go into a `data/raw` directory.
+- The merged data should go in the `data/derived` directory.
 
 ## Moving things around
 
 - Create directories
 - Consolidate paths
 
----
-
-- Time to write a main file!
-
-## Purpose of the main file
-
-- Complete list of all steps!
-- One-touch reproduction
-- Robustness checks all along
-
-## Example
-
-```
-do "code/00_setup.do"
-do "code/01_download_data.do"
-do "code/02_create_analysis_sample.do"
-do "code/03_analysis.do"
-```
 
 
 ## Link
 
 
-Step 5:[^fallback3]
- 
-- [Stata](https://drive.google.com/file/d/1-wACVz8iMmDWbuYqLSePc2ZuGp-0yFbv/view?usp=drive_link)
-- [R](https://drive.google.com/file/d/10Zgjtfd0M4WRJToKt9M08jIoLEKCdaiC/view?usp=drive_link) 
+Step 3: [Stata](https://drive.google.com/file/d/1nTbFvEGDEu6ZFZyMi61mx66AtnUqb9k6/view?usp=sharing) [^fallback3]
 
-[^fallback3]: [🔒Tag: stage5](https://github.com/codedthinking/day1/tree/stage5)
+[^fallback3]: [🔒Tag: stage3](https://github.com/codedthinking/day1/tree/stage3) [🔒Diff: stage3](https://github.com/codedthinking/day1/commit/e4a1e192d3eb37c02d82b3ffa8a9b49a4f946e46)
+
 

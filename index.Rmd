@@ -8,28 +8,35 @@ date: January 2025
 
 ---
 
-## Follow along
+```{r config,include=FALSE}
+library(qrcode)
 
-:::: {.columns}
+# The repository name
 
-::: {.column width="30%"}
+message(Sys.getenv("GITHUB_REPOSITORY"))
 
-:::
+# Process the repository name to generate the URL
+# - split the two components
+# - combine them into a URL with 'github.io' in the middle
 
-::: {.column width="40%"}
+SUBDIRECTORY <- "" # Leave this empty if this file is in the main directory of the repository
 
-![](images/qr-day1-lars.png){width="350" height="350"}
+GITHUB_REPOSITORY <- Sys.getenv("GITHUB_REPOSITORY")
+GITHUB_REPOSITORY_PARTS <- strsplit(GITHUB_REPOSITORY, "/")[[1]]
+REPOSITORY_URL <- paste0("https://github.com/", GITHUB_REPOSITORY)
+
+WEBSITE_URL <- paste0("https://", GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSITORY_PARTS[2], "/", SUBDIRECTORY)
+WEBSITE_SHORT <- paste0(GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSITORY_PARTS[2], "/", SUBDIRECTORY)
+
+```
 
 
-:::
+```{r, child=c(here::here("presentation",'00-qrcode.md'))}
+```
 
-::: {.column width="30%"}
+```{r, child=c(here::here("presentation",'00-follow-along.md'))}
+```
 
-:::
-
-::::
-
-[lars.vilhuber.com/p/assa2025/](https://lars.vilhuber.com/p/assa2025/)
 
 
 # Reproducibility from Day 1
@@ -89,39 +96,18 @@ We finish with a mini-project about public procurement across various European c
 ```{r, child=c(here::here('04-re-structure.md'))} 
 ```
 
-```{r, child=c(here::here('05-robust-code.md'))} 
+```{r, child=c(here::here('06-robust-code.md'))} 
 ```
 
-```{r, child=c(here::here('06-secrets-in-code.md'))} 
+```{r, child=c(here::here('07-secrets-in-code.md'))} 
 ```
 
-# Part 2
-
-:::: {.columns}
-
-::: {.column width="30%"}
-
-:::
-
-::: {.column width="40%"}
-
-![](images/day-t-online.png){width="350" height="350"}
-
-[Continue to Part 2](https://larsvilhuber.github.io/self-checking-reproducibility/presentation/) ([local](file:///C:/Users/lv39/Documents/GitHub/self-checking-reproducibility/presentation/index.html))
-
-:::
-
-::: {.column width="30%"}
-
-:::
-
-::::
+```{r, child=c(here::here('80-wrapping-up.md'))} 
+```
 
 ## 
 
 
-Step 5: [Stata](https://drive.google.com/file/d/1-wACVz8iMmDWbuYqLSePc2ZuGp-0yFbv/view?usp=drive_link)
-[R](https://drive.google.com/file/d/10Zgjtfd0M4WRJToKt9M08jIoLEKCdaiC/view?usp=drive_link)
 
 ```{r, child=c(here::here('99-links.md'))}
 ```
