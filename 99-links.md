@@ -25,5 +25,10 @@ Step 5: [Stata](https://drive.google.com/file/d/1-wACVz8iMmDWbuYqLSePc2ZuGp-0yFb
 
 ---
 
+- [Template README](https://social-science-data-editors.github.io/template_README/template-README.html)
+- [README presentation](https://larsvilhuber.github.io/readme-presentation/)
+
+---
+
 - This presentation's source: <https://github.com/larsvilhuber/day1-tutorial/>
 - Licensed under [![CC BY-NC 4.0](/images/by-nc.png)](https://creativecommons.org/licenses/by-nc/4.0/)

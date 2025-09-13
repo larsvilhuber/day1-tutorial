@@ -69,7 +69,7 @@ download.file(url="$URL",destfile="(outputfile)")
 
 # Creating a README
 
-- [Template README](https://social-science-data-editors.github.io/template_README/template-README.html)
+- [Template README](https://social-science-data-editors.github.io/template_README/template-README.html) ([P](https://larsvilhuber.github.io/readme-presentation/))
   - Cite both dataset and working paper
   - Add data URL and time accessed (can you think of a way to automate this?)
   - Add a link to license (also: download and store the license)
