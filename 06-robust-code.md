@@ -107,7 +107,7 @@ Step 3 (with robust download code) [Stata](https://drive.google.com/file/d/1nTbF
 global step1 1
 global step2 1
 
-do "code/00_setup.do"
+do "code/config.do"
 if $step1 == 1  do "code/01_download_data.do"
 if $step2 == 1  do "code/02_create_analysis_sample.do"
 if $step3 == 1  do "code/03_analysis.do"
@@ -115,7 +115,7 @@ if $step3 == 1  do "code/03_analysis.do"
 
 ## Example (2) {transition="fade" transition-speed="fast"}
 
-Here we always run the `00_setup.do` file.
+Here we always run the `config.do` file.
 
 ```{.stata code-line-numbers="6"}
 // Header of main.do
@@ -123,7 +123,7 @@ Here we always run the `00_setup.do` file.
 global step1 1
 global step2 1
 
-do "code/00_setup.do"
+do "code/config.do"
 if $step1 == 1  do "code/01_download_data.do"
 if $step2 == 2  do "code/02_create_analysis_sample.do"
 if $step3 == 3  do "code/03_analysis.do"
@@ -139,7 +139,7 @@ Then conditionally run the other pieces:
 global step1 1
 global step2 1
 
-do "code/00_setup.do"
+do "code/config.do"
 if $step1 == 1  do "code/01_download_data.do"
 if $step2 == 1  do "code/02_create_analysis_sample.do"
 if $step3 == 1  do "code/03_analysis.do"
@@ -175,7 +175,7 @@ global step1 1
 global step2 1
 
 // Nothing needs to be changed here
-do "$rootdir/code/00_setup.do"
+do "$rootdir/code/config.do"
 if $step1 == 1  do "$rootdir/code/01_download_data.do"
 if $step2 == 1  do "$rootdir/code/02_create_analysis_sample.do"
 if $step3 == 1  do "$rootdir/code/03_analysis.do"
@@ -195,7 +195,7 @@ global step1 1
 global step2 1
 
 // Nothing needs to be changed here
-do "$rootdir/code/00_setup.do"
+do "$rootdir/code/config.do"
 if $step1 == 1  do "$rootdir/code/01_download_data.do"
 if $step2 == 1  do "$rootdir/code/02_create_analysis_sample.do"
 if $step3 == 1  do "$rootdir/code/03_analysis.do"
@@ -218,7 +218,7 @@ qui checksum "$resultfile1"
 if `r(checksum)' == $checksum1 global step2 0 
 
 // Nothing needs to be changed here
-do "$rootdir/code/00_setup.do"
+do "$rootdir/code/config.do"
 if $step1 == 1  do "$rootdir/code/01_download_data.do"
 if $step2 == 1  do "$rootdir/code/02_create_analysis_sample.do"
 if $step3 == 1  do "$rootdir/code/03_analysis.do"
