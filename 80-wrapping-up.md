@@ -28,6 +28,10 @@ Start with our [fabulous template README](https://social-science-data-editors.gi
 [![README](images/img-2021-11-08-2.png)](https://social-science-data-editors.github.io/template_README/)
 
 
+## Back to our original example
+
+[README from Day 1, on Day T-1](https://github.com/larsvilhuber/day1-tutorial/blob/main/stage6-README.md)
+
 ## Three parts to README
 
 - Data availability (and citations)
