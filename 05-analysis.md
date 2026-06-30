@@ -79,7 +79,7 @@ do "code/03_analysis.do"
 :::: {.columns}
 ::: {.column width="50%"}
 
-```{.bash}
+```{.bash code-line-numbers="7"}
 Stage5
 ├── code
 │   ├── 00_setup.do
@@ -97,7 +97,7 @@ Stage5
 :::
 ::: {.column width="50%"}
 
-```{.bash}
+```{.bash code-line-numbers="12"}
 Stage5
 ├── code
 │   ├── 00_setup.do
