@@ -98,6 +98,9 @@ We finish with a replication package for a project about public procurement acro
 ```{r, child=c(here::here('04-re-structure.md'))} 
 ```
 
+```{r, child=c(here::here('05-analysis.md'))} 
+```
+
 ```{r, child=c(here::here('06-robust-code.md'))} 
 ```
 

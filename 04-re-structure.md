@@ -63,9 +63,7 @@ Stage1
 :::
 ::::
 
-
-:::
-::: {.column width="50%"}
+---
 
 ```{.bash}
 Stage2
@@ -81,8 +79,6 @@ Stage2
 ├── LICENSE
 └── README.md
 ```
-:::
-:::
 
 [^fallback2]: [🔒Tag: stage2](https://github.com/codedthinking/day1/tree/stage2) [🔒Diff: stage2](https://github.com/codedthinking/day1/commit/3bc978d0f066c15d96b0e005d79b5dc9669bdb00)
 
