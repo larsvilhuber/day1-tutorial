@@ -39,9 +39,6 @@ Various guidance pages provided by data editors and others:
 
 ## Easiest:
 
-:::: {.columns}
-
-:::: {.column width="50%"}
 
 **Stata**
 
@@ -49,16 +46,11 @@ Various guidance pages provided by data editors and others:
 # Download from https://www.cepii.fr/distance/ 
 use "$URL" , clear
 ```
-:::
-::: {.column width="50%"}
 
 ```{.bash}
-Start/
-└── dist_cepii.dta
+Project/
 ``` 
 
-:::
-::::
 
 
 ## Why not?
@@ -83,6 +75,12 @@ download.file(url="$URL",destfile="(outputfile)")
 
 ## We will get to even better methods a bit later
 
+```{.bash}
+Project/
+├── dist_cepii.dta
+└── download_data.do
+``` 
+
 # Creating a README
 
 - [Template README](https://social-science-data-editors.github.io/template_README/template-README.html) ([P](https://larsvilhuber.github.io/readme-presentation/))
@@ -91,8 +89,26 @@ download.file(url="$URL",destfile="(outputfile)")
   - Add a link to license (also: download and store the license)
 
 
-## Link
+## State {.smaller}
 
-Step 1: [Stata](https://drive.google.com/file/d/10IH2TCnckH8TLeZ0P6cJlVgpyrqC4Q3L/view?usp=sharing), [R](https://drive.google.com/file/d/10_pxEathhgIhxdYl2YFZVhv3oaPgJt2u/view?usp=drive_link) [^fallback1]
+:::: {.columns}
+::: {.column width="50%"}
 
-[^fallback1]: [🔒Tag: stage1](https://github.com/codedthinking/day1/tree/stage1)
+- Code
+- Data downloaded by code
+- README[^fallback1]
+:::
+::: {.column width="50%"}
+
+```{.bash}
+Stage0
+├── download_data.do
+├── dist_cepii.dta
+├── LICENSE
+└── README.md
+```
+
+:::
+::::
+
+[^fallback1]: [🔒Tag: stage0](https://github.com/codedthinking/day1/tree/stage0)

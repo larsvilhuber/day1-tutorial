@@ -1,5 +1,10 @@
 # Structure of the project
 
+## Providing a bit more structure
+
+- Starting to cumulate documents, code, etc.
+- Let's structure the project by modern standards, i.e., **by function**
+
 ## Folder by function
 
 Let's start with something easy. Separate folders for each function: `code/` and `data/`
@@ -40,22 +45,30 @@ copy "$URL" "C:\Users\lv39\Desktop\day1\data\that_file_from_cepii.dta", replace
 
 Why?
 
+## State {.smaller}
 
-# Expanding data downloads
+:::: {.columns}
+::: {.column width="50%"}
 
-## Redo the same thing for other data
+- Code
+- Data downloaded by code
+- README
+- Directories by function
 
-- Tender data: <https://data.europa.eu/euodp/en/data/dataset/ted-csv> 
-  - Too big, therefore: <https://github.com/codedthinking/tender-home-bias/releases/download/v2.0/ted-sample.csv>
-- Country codes: <https://datahub.io/core/country-codes>
+:::
+::: {.column width="50%"}
 
+```{.bash}
+Stage1
+├── code
+│   └── download_data.do
+├── data
+│   └── dist_cepii.dta
+├── LICENSE
+└── README.md
+```
 
+:::
+::::
 
-## Link {.smaller}
-
-Step 2: [Stata](https://drive.google.com/file/d/10H1tlkbPgu88whHZddLRibZystu5mrZt/view?usp=drive_link) [^fallback2]
-[R](https://drive.google.com/file/d/10_2sFQGfc4m9MEQexZ87S15umFw4b9HH/view?usp=drive_link)
-
-
-[^fallback2]: [🔒Tag: stage2](https://github.com/codedthinking/day1/tree/stage2) [🔒Diff: stage2](https://github.com/codedthinking/day1/commit/3bc978d0f066c15d96b0e005d79b5dc9669bdb00)
 

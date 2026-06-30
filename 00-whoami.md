@@ -13,7 +13,7 @@ Executive Director of the [Labor Dynamics Institute](http://www.ilr.cornell.edu/
 ::: {.column width="50%"}
 
 
-![**Lars Vilhuber**](images/lv39-2014.jpg){height=400px}
+![**Lars Vilhuber**](images/lv39-2014.jpg)
 
 :::
 
