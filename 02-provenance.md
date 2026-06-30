@@ -39,11 +39,27 @@ Various guidance pages provided by data editors and others:
 
 ## Easiest:
 
+:::: {.columns}
+
+:::: {.column width="50%"}
+
 **Stata**
 
 ```{.stata}
+# Download from https://www.cepii.fr/distance/ 
 use "$URL" , clear
 ```
+:::
+::: {.column width="50%"}
+
+```{.bash}
+Start/
+└── dist_cepii.dta
+``` 
+
+:::
+::::
+
 
 ## Why not?
 

@@ -37,6 +37,8 @@ WEBSITE_SHORT <- paste0(GITHUB_REPOSITORY_PARTS[1], ".github.io/", GITHUB_REPOSI
 ```{r, child=c(here::here('00-follow-along.md'))}
 ```
 
+```{r, child=c(here::here('00-whoami.md'))}
+```
 
 
 # Reproducibility from Day 1
@@ -82,7 +84,7 @@ We start with an empty folder, and an idea.
 :::
 ::::
 
-We finish with a mini-project about public procurement across various European countries. 
+We finish with a replication package for a project about public procurement across various European countries. 
 
 ```{r, child=c(here::here('01-setup.md'))}	
 ```
