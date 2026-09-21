@@ -54,7 +54,12 @@ Implicit uses of version control:
 
 ## The principal idea
 
+:::::{.columns}
+:::: {.column width="50%"}
+
 ![](images/vcs-revision-controlled-project.png)
+::::
+:::: {.column width="50%"}
 
 - First edition
 - Second edition
@@ -62,8 +67,9 @@ Implicit uses of version control:
 - Start of work on the next US edition
 - Third edition
 - First Canadian edition
+::::
 
-## File-system based versioning {.orange}
+## File-system based versioning 
 
 The most common (informal) method... also used in email...
 
@@ -76,7 +82,7 @@ The most common (informal) method... also used in email...
 README.txt
 ```
 
-## What if I make changes? {.orange}
+## What if I make changes? 
 
 ```{.bash code-line-numbers="7-10"}
 01_01_readBLS.R
