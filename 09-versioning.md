@@ -68,6 +68,7 @@ Implicit uses of version control:
 - Third edition
 - First Canadian edition
 ::::
+:::::
 
 ## File-system based versioning 
 
@@ -104,17 +105,25 @@ Sound familiar?
 
 ## Two major types of version control
 
+::::: {.columns}
+:::: {.column width="50%"}
+
 **Centralized model**
 
 - Server-client: editors check out a copy, modify it, check it back in
 - *File locking*: only one person can check out a given file at a time
 - *Version merging*: discrepancies are handled at check-in
 
+::::
+:::: {.column width="50%"}
+
 **Distributed model**
 
 - No central server required
 - Every editor has a full copy of the history
 - Synchronization happens by exchanging patches
+::::
+:::::
 
 ## We'll focus on Git
 
