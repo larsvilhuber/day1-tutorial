@@ -41,3 +41,21 @@
   background-color: lemonchiffon;
   font-weight: bolder;
 }
+
+/* warm orange full-slide background (apply with `## Title {.orange}`).
+   Override reveal's centered-layout offset so the colour fills the whole slide,
+   then re-centre the content with flexbox. */
+.reveal section.orange {
+  background-color: #e35925;
+  position: absolute;
+  top: 0 !important;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 60px 80px !important;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
